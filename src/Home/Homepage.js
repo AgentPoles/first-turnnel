@@ -11,6 +11,7 @@ import NotificationsActiveOutlinedIcon from "@material-ui/icons/NotificationsAct
 import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
 import { Badge } from "@material-ui/core";
 import AppsIcon from "@material-ui/icons/Apps";
+import girly from "../Assets/images/girly.PNG";
 import { MenuItem } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
@@ -50,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 export const SearchContext = React.createContext();
-let searched = "";
+// let searched = "";
 const Homepage = () => {
   const classes = useStyles();
   const [searched, setSearched] = useState({
@@ -96,7 +97,7 @@ const Homepage = () => {
                   />
                 </Badge>
               </IconButton>
-              <Avatar src={Kabura} alt="host icon" />
+              <Avatar src={girly} alt="host icon" />
             </Toolbar>
           </AppBar>
         </header>
@@ -127,7 +128,8 @@ function Copyright() {
         style={{ color: colors.grey_writing_color }}
       >
         {" nada es imposible para dios © "}
-        <Link color="inherit" href="https://material-ui.com/"></Link>{" "}
+        <Link color="inherit" href="www.linkedin.com/in/paule-oamen"></Link>
+        {"paul oamen "}
         {new Date().getFullYear()}
         {"."}
       </Typography>

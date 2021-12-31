@@ -53,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
     height: 28,
     margin: 4,
     color: colors.main_color,
+    border: colors.main_color,
   },
 
   dividerh: {
@@ -85,6 +86,9 @@ export default function Search({ onSearched }) {
   const handleChange = (e) => {
     setSearched({ [e.target.name]: e.target.value });
   };
+  const handleChangee = (e) => {
+    setSearched({ [e.target.name]: e.target.value });
+  };
   return (
     <Box className={classes.root} border={1.5}>
       {/* <div component="form" className={classes.root} elevation={0}> */}
@@ -92,7 +96,7 @@ export default function Search({ onSearched }) {
         type="submit"
         className={classes.iconButton}
         aria-label="search"
-        onClick={(e) => handleClick(e)}
+        // onClick={(e) => handleClick(e)}
         style={{ color: colors.main_color }}
       >
         <SearchIcon />
@@ -102,12 +106,11 @@ export default function Search({ onSearched }) {
       <InputBase
         className={classes.otherInputs}
         placeholder="TOKEN"
-        value={""}
         name="TOKEN_NAME"
         onChange={(e) => {
-          // handleChange(e);
+          handleChangee(e);
         }}
-        inputProps={{ "aria-label": "search transactions" }}
+        // inputProps={{ "aria-label": "search transactions" }}
       />
       <Divider className={classes.divider} orientation="vertical" />
       <InputBase
